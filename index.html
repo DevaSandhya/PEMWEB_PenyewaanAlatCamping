@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/icon.png" />
+    <title>Wilderness Gear Emporium</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f8b400;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .tenda {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .tenda h1 {
+            color: #3c6382;
+            margin-bottom: 20px;
+        }
+        .tenda p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .cards-categories {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card {
+            flex: 0 0 calc(33.333% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/rinjani adventure.png"/>
+            </div>
+            <a href="index.html">Beranda</a>
+            <a href="#">Kategori</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="tenda">
+            <button type="button">Get Started</button>
+            <h1>Berikut Adalah Daftar Penyewaan Alat Camping</h1>
+        </div>
+        <div class="cards-categories">
+            <div class="card">
+                <img src="assets/tenda.jpeg" alt="TENDA" />
+            </div>
+            <div class="card">
+                <img src="assets/carrier.jpeg" alt="CARRIER" />
+            </div>
+            <div class="card">
+                <img src="assets/kompor.jpeg" alt="KOMPOR" />
+            </div>
+            <div class="card">
+                <img src="assets/nesting.jpeg" alt="NESTING" />
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h4>&copy; Rinjani Adventure</h4>
+    </footer>
+</body>
+</html>
