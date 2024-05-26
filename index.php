@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/icon.png" />
+    <title>Rinjani Adventure Emporium</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        header {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .jumbotron {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .jumbotron h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .jumbotron p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .jumbotron button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #3c6382;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .jumbotron button:hover {
+            background-color: #3c6382;
+        }
+        .cards-categories {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card {
+            flex: 0 0 calc(33.333% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/rinjani adventure.png" alt="Rinjani Adventure Emporium" />
+            </div>
+            <a href="#">Beranda</a>
+            <a href="#">Kategori</a>
+            <a href="login.php">Masuk</a>
+        </nav>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <div class="jumbotron-text">
+                <h1>Sewa Alat Camping Berkualitas</h1>
+                <p>Temukan Perlengkapan Camping Terbaik Untuk Petualangan Anda Bersama Rinjani Adventure</p>
+                <button type="button">Mulai Petualanganmu</button>
+        <div class="cards-categories">
+            <div class="card">
+                <img src="assets/tenda.jpeg" alt="Tenda" />
+            </div>
+            <div class="card">
+                <img src="assets/carrier.jpeg" alt="Carrier" />
+            </div>
+            <div class="card">
+                <img src="assets/kompor.jpeg" alt="Kompor" />
+            </div>
+            <div class="card">
+                <img src="assets/nesting.jpeg" alt="Nesting" />
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h4>&copy; Rinjani Adventure</h4>
+    </footer>
+</body>
+</html>

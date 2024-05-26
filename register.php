@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/icon.png" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .form-login {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-login h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="email"],
+        input[type="text"],
+        input[type="password"],
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #3c6382;
+            outline: none;
+        }
+        button[type="submit"] {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #3c6382;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #3c6382;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="login.php">Beranda</a>
+        <a href="#">Kategori</a>
+        <a href="login.php" class="btn_login">Masuk</a>
+    </nav>
+</header>
+<main>
+    <div class="form-login">
+        <h3>Register</h3>
+        <form action="register-proses.php" method="post">
+        <input type="email" name="email" placeholder="Email" />
+        <input type="text" name="username" placeholder="Nama" />
+        <input type="password" name="password" placeholder="Kata Sandi" />
+        <button type="submit" class="btn_login" name="register" id="register">Register</button>
+    </div>
+</main>
+<footer>
+    <h4>&copy; Rinjani Adventure</h4>
+</footer>
+<script>
+    function registerUser() {
+        var email = document.querySelector(".form-login input[name='email']").value;
+        var username = document.querySelector(".form-login input[name='username']").value;
+        var password = document.querySelector(".form-login input[name='password']").value;
+
+        if (email.trim() === "" || username.trim() === "" || password.trim() === "") {
+            alert("Harap isi semua kolom!");
+            return;
+        }
+
+        alert("Registrasi berhasil!");
+        // Additional registration logic can be added here
+    }
+</script>
+</body>
+</html>
