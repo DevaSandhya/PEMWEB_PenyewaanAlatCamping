@@ -3,17 +3,17 @@
 <head>
     <link rel="icon" href="assets/icon.png" />
     <title>Register</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f1f1f1;
         }
         header {
             background-color: #3c6382;
@@ -22,10 +22,19 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #000;
         }
         main {
             padding: 20px;
@@ -35,46 +44,33 @@
             background-color: #fff;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             max-width: 400px;
-            margin: 0 auto;
+            margin: 40px auto;
         }
         .form-login h3 {
-            color: #333;
+            font-size: 24px;
             margin-bottom: 20px;
         }
-        input[type="email"],
-        input[type="text"],
-        input[type="password"],
-        button[type="submit"] {
-            width: 100%;
+        .form-login input {
+            width: calc(100% - 22px); /* Adjusted width to account for padding and border */
             padding: 10px;
-            margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;
+            margin-bottom: 20px;
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
         }
-        input[type="email"]:focus,
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            border-color: #3c6382;
-            outline: none;
-        }
-        button[type="submit"] {
+        .btn_login {
+            padding: 10px 20px;
             background-color: #3c6382;
             color: #fff;
-            padding: 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
-        button[type="submit"]:hover {
-            background-color: #3c6382;
-        }
-        a {
-            color: #333;
-            text-decoration: none;
+        .btn_login:hover {
+            background-color: #2b4967;
         }
         footer {
             background-color: #3c6382;
@@ -90,38 +86,24 @@
 <body>
 <header>
     <nav>
-        <a href="login.php">Beranda</a>
+        <a href="index.php">Beranda</a>
         <a href="#">Kategori</a>
-        <a href="login.php" class="btn_login">Masuk</a>
+        <a href="login.php">Masuk</a>
     </nav>
 </header>
 <main>
     <div class="form-login">
-        <h3>Register</h3>
+        <h3>Mendaftar</h3>
         <form action="register-proses.php" method="post">
-        <input type="email" name="email" placeholder="Email" />
-        <input type="text" name="username" placeholder="Nama" />
-        <input type="password" name="password" placeholder="Kata Sandi" />
-        <button type="submit" class="btn_login" name="register" id="register">Register</button>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="username" placeholder="Nama" />
+            <input type="password" name="password" placeholder="Kata Sandi" />
+            <button type="submit" class="btn_login" name="register" id="register">Mendaftar</button>
+        </form>
     </div>
 </main>
 <footer>
     <h4>&copy; Rinjani Adventure</h4>
 </footer>
-<script>
-    function registerUser() {
-        var email = document.querySelector(".form-login input[name='email']").value;
-        var username = document.querySelector(".form-login input[name='username']").value;
-        var password = document.querySelector(".form-login input[name='password']").value;
-
-        if (email.trim() === "" || username.trim() === "" || password.trim() === "") {
-            alert("Harap isi semua kolom!");
-            return;
-        }
-
-        alert("Registrasi berhasil!");
-        // Additional registration logic can be added here
-    }
-</script>
 </body>
 </html>
